@@ -105,6 +105,7 @@ void  conjetura(int numero){
     for(int i=0; i<numerosprimos; i++ ){
         for(int j=0; j<numerosprimos; j++){
 	    if(arreglo[i]+arreglo[j]==numero){
+	        cout<<"_______________________"<<endl;
 	        cout<<"El primer numero es: "<<arreglo[i]<<endl;
 		cout<<"El segundo numero es: "<<arreglo[j]<<endl;
 	        break;
