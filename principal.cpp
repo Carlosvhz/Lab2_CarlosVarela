@@ -75,7 +75,34 @@ int main(){
 
 void  conjetura(int numero){
     
+    int contador;
+    int primerNumero, segundoNumero;
+    int numerosprimos;
+
+    for(int i=numero; i>0; i--){
+	contador=0;    
+        for(int j=i; j>0; j--){
+	    if(i%j==0){
+	        contador++;
+	    }
+	}
+	if(contador==2){
+	    numerosprimos++;
+	}
+    }
+
+    int arreglo[numerosprimos];
+    int contador2=0;
+    contador = 0;
+    for(int i=numero; i>0; i--){
+        for(int j=i; j>0; j--){
+	    if(i%j==0){
+	        		       
+	    }
+	}    
+    }              	
 }
+
 
 
 int sumaabn(int a, int b, int n){
