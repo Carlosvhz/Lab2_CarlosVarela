@@ -93,14 +93,29 @@ void  conjetura(int numero){
 
     int arreglo[numerosprimos];
     int contador2=0;
-    contador = 0;
+
     for(int i=numero; i>0; i--){
-        for(int j=i; j>0; j--){
+        contador = 0;
+	for(int j=i; j>0; j--){
 	    if(i%j==0){
-	        		       
+	       contador++; 		       
 	    }
-	}    
-    }              	
+	}
+        if(contador==2){
+	    arreglo[contador2]=i;
+	    contador2++;
+	}	
+    }
+
+    for(int i=0; i<=numerosprimos; i++ ){
+        for(int j=0; j<=numerosprimos; j++){
+	    if(arreglo[i]+arreglo[j]==numero){
+	        cout<<"El primer numero es: "<<arreglo[i]<<endl;
+		cout<<"El segundo numero es: "<<arreglo[j]<<endl;
+	        break;
+	    }
+	}
+    }    
 }
 
 
