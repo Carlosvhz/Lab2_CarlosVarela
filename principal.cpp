@@ -50,6 +50,11 @@ int main(){
     return 0;
 }
 
+int conjetura(int numero){
+    
+}
+
+
 int sumaabn(int a, int b, int n){
     int suma = 0;
     for(int i=n; i>=0; i--){
