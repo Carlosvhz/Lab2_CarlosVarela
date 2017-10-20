@@ -7,12 +7,14 @@ int sumaprimos(int);
 int sumaabn(int, int, int);
 void conjetura(int);
 
+
 int main(){
 
     string respuesta;
     int opcion = 0;
+ 
     cout<<"______Menu______"<<endl;
-    
+
     do{
         cout<<"1. Ejercicio #1 Primos"<<endl
         <<"2. Ejercicio #2 Suma de multiplos"<<endl
@@ -30,6 +32,7 @@ int main(){
                 cin>>numero;
 		cout<<"EL resultado es: "<<sumaprimos(numero)<<endl;
 	    }	
+            break;
 
 	    case 2:{
 	        int a;
@@ -44,8 +47,8 @@ int main(){
 	        cin>>n;
 	        cout<<"EL resultado es: "<<sumaabn(a,b,n)<<endl;	
 	    }      
+	    break;
 
-	    break;	  
 	    case 3:{
 		int numero;	   
 	        cout<<" - Ejercicio#3 - "<<endl
@@ -58,7 +61,8 @@ int main(){
                 conjetura(numero);
     	    }
      	    break;		   
-	}	
+	}
+
         cout<<"______________________"<<endl
 	<<"¿Desea continuar?[s/n]: ";
         cin>>respuesta;	
@@ -67,6 +71,7 @@ int main(){
 
     return 0;
 }
+
 
 void  conjetura(int numero){
     
@@ -85,6 +90,7 @@ int sumaabn(int a, int b, int n){
     }
     return suma;
 }
+
 
 int sumaprimos(int numero){
     int contador;
