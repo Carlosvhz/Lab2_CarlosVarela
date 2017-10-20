@@ -54,11 +54,18 @@ int main(){
 	        cout<<" - Ejercicio#3 - "<<endl
 		<<"Ingrese numero: ";
                 cin>>numero;
-                conjetura(numero);
+                while(numero>150||numero%2!=0||numero<=0){
+		    cout<<"Ingrese numero de nuevo: ";
+		    cin>>numero;
+		}
+		conjetura(numero);
     	    }
      	    break;		   
+            
+	    default:
+	       cout<<"No hay numero para este ejercicio"<<endl;
+	    break;   
 	}
-
         cout<<"______________________"<<endl
 	<<"¿Desea continuar?[s/n]: ";
         cin>>respuesta;	
@@ -88,12 +95,11 @@ void  conjetura(int numero){
 
     int arreglo[numerosprimos];
     int contador2=0;
-
     for(int i=numero; i>0; i--){
         contador = 0;
 	for(int j=i+10; j>0; j--){
 	    if(i%j==0){
-	       contador++; 		       
+	        contador++; 		       
 	    }
 	}
         if(contador==2){
@@ -118,7 +124,7 @@ void  conjetura(int numero){
 
 int sumaabn(int a, int b, int n){
     int suma = 0;
-    for(int i=n; i>=0; i--){
+    for(int i=n; i>0; i--){
        if(i%b==0){
            suma+=i;
        }
@@ -136,7 +142,7 @@ int sumaprimos(int numero){
     for(int i = numero; i>0; i--){
 	contador = 0;
         for (int j = i+10; j>0; j--){
-	    if(i%j==0){
+	    if(i%j==0){    
 	        contador++;
 	    }
 	}
