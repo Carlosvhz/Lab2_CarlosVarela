@@ -5,19 +5,24 @@ using namespace std;
 //Prototipo
 int sumaprimos(int);
 int sumaabn(int, int, int);
+void conjetura(int);
 
 int main(){
+
     string respuesta;
     int opcion = 0;
     cout<<"______Menu______"<<endl;
+    
     do{
         cout<<"1. Ejercicio #1 Primos"<<endl
         <<"2. Ejercicio #2 Suma de multiplos"<<endl
         <<"3. Ejercicio #3 Conjetura de Goldbach"<<endl
         <<"Ingrese opcion: ";
-        cin>>opcion;
+       
+       	cin>>opcion;
 	cout<<endl;
-        switch(opcion){
+       
+       	switch(opcion){
 	    case 1:{
 		int numero;	   
 	        cout<<" - Ejercicio#1 - "<<endl
@@ -25,6 +30,7 @@ int main(){
                 cin>>numero;
 		cout<<"EL resultado es: "<<sumaprimos(numero)<<endl;
 	    }	
+
 	    case 2:{
 	        int a;
 		int b;
@@ -37,9 +43,21 @@ int main(){
 	        cout<<"Ingrese numero n: ";
 	        cin>>n;
 	        cout<<"EL resultado es: "<<sumaabn(a,b,n)<<endl;	
-	    }          	   
-	    
+	    }      
+
 	    break;	  
+	    case 3:{
+		int numero;	   
+	        cout<<" - Ejercicio#3 - "<<endl
+		<<"Ingrese numero: ";
+                cin>>numero;
+		while(numero>150||!numero%2==0){
+		    cout<<"Ingrese numero de nuevo: ";
+		    cin>>numero;
+		}
+                conjetura(numero);
+    	    }
+     	    break;		   
 	}	
         cout<<"______________________"<<endl
 	<<"¿Desea continuar?[s/n]: ";
@@ -50,7 +68,7 @@ int main(){
     return 0;
 }
 
-int conjetura(int numero){
+void  conjetura(int numero){
     
 }
 
