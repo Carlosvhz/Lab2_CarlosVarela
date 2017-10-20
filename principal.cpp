@@ -4,7 +4,7 @@ using namespace std;
 
 //Prototipo
 int sumaprimos(int);
-
+int sumaabn(int, int, int);
 
 int main(){
     string respuesta;
@@ -14,8 +14,9 @@ int main(){
         cout<<"1. Ejercicio #1 Primos"<<endl
         <<"2. Ejercicio #2 Suma de multiplos"<<endl
         <<"3. Ejercicio #3 Conjetura de Goldbach"<<endl
-        <<"Ingrese opcion:";
+        <<"Ingrese opcion: ";
         cin>>opcion;
+	cout<<endl;
         switch(opcion){
 	    case 1:{
 		int numero;	   
@@ -24,17 +25,42 @@ int main(){
                 cin>>numero;
 		cout<<"EL resultado es: "<<sumaprimos(numero)<<endl;
 	    }	
-	    case 2:
-	        	   
+	    case 2:{
+	        int a;
+		int b;
+		int n;
+		cout<<" - Ejercicio#2 - "<<endl
+		<<"Ingrese numero a: ";
+	        cin>>a;
+	        cout<<"Ingrese numero b: ";
+	        cin>>b;
+	        cout<<"Ingrese numero n: ";
+	        cin>>n;
+	        cout<<"EL resultado es: "<<sumaabn(a,b,n)<<endl;	
+	    }          	   
+	    
 	    break;	  
 	}	
         cout<<"______________________"<<endl
 	<<"¿Desea continuar?[s/n]: ";
         cin>>respuesta;	
 	cout<<endl;
-    }while(respuesta =="Si");
+    }while(respuesta =="s");
 
     return 0;
+}
+
+int sumaabn(int a, int b, int n){
+    int suma = 0;
+    for(int i=n; i>=0; i--){
+       if(i%b==0){
+           suma+=i;
+       }
+       if(i%a==0){
+           suma+=i;
+       }       
+    }
+    return suma;
 }
 
 int sumaprimos(int numero){
