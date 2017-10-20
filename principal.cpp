@@ -54,10 +54,6 @@ int main(){
 	        cout<<" - Ejercicio#3 - "<<endl
 		<<"Ingrese numero: ";
                 cin>>numero;
-		while(numero>150||!numero%2==0){
-		    cout<<"Ingrese numero de nuevo: ";
-		    cin>>numero;
-		}
                 conjetura(numero);
     	    }
      	    break;		   
@@ -76,18 +72,17 @@ int main(){
 void  conjetura(int numero){
     
     int contador;
-    int primerNumero, segundoNumero;
-    int numerosprimos;
+    int numerosprimos=0;
 
     for(int i=numero; i>0; i--){
 	contador=0;    
-        for(int j=i; j>0; j--){
+        for(int j=i+10; j>0; j--){
 	    if(i%j==0){
 	        contador++;
 	    }
 	}
 	if(contador==2){
-	    numerosprimos++;
+		numerosprimos++;
 	}
     }
 
@@ -96,7 +91,7 @@ void  conjetura(int numero){
 
     for(int i=numero; i>0; i--){
         contador = 0;
-	for(int j=i; j>0; j--){
+	for(int j=i+10; j>0; j--){
 	    if(i%j==0){
 	       contador++; 		       
 	    }
@@ -107,8 +102,8 @@ void  conjetura(int numero){
 	}	
     }
 
-    for(int i=0; i<=numerosprimos; i++ ){
-        for(int j=0; j<=numerosprimos; j++){
+    for(int i=0; i<numerosprimos; i++ ){
+        for(int j=0; j<numerosprimos; j++){
 	    if(arreglo[i]+arreglo[j]==numero){
 	        cout<<"El primer numero es: "<<arreglo[i]<<endl;
 		cout<<"El segundo numero es: "<<arreglo[j]<<endl;
